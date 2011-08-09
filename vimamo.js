@@ -1,10 +1,14 @@
-SELECTORS = {
-  "www.facebook.com": ".uiStreamStory"  
+var sites = {
+  "www.facebook.com": {
+    selector: ".uiStreamStory",
+    offsetBottom: 30,
+    offsetTop: -10
+  }
 };
-var site = location.hostname;
+var options = sites[location.hostname];
 
 $(document).ready(function() {
-  $(SELECTORS[site]).first().addClass("vimamo-selected");
+  $(options.selector).first().addClass("vimamo-selected");
 });
 
 $(document).jkey("j, k", true, function(key) {
@@ -13,10 +17,10 @@ $(document).jkey("j, k", true, function(key) {
       direction = "up";
 
   if (key === "j") { // down
-    next = current.next(SELECTORS[site]);
+    next = current.next(options.selector);
     direction = "down";
   } else { // key == "k" up
-    next = current.prev(SELECTORS[site])
+    next = current.prev(options.selector)
   }
 
   if (next.length > 0) {
@@ -31,10 +35,10 @@ $(document).jkey("j, k", true, function(key) {
 
     if (direction === "down") {
       if (elementBottom > windowBottom) {
-        window.scrollTo(windowLeft, elementBottom - $(window).height() + 30);
+        window.scrollTo(windowLeft, elementBottom - $(window).height() + options.offsetBottom);
       }
     } else if (elementTop < windowTop) { // up
-        window.scrollTo(windowLeft, elementTop - 10);
+        window.scrollTo(windowLeft, elementTop + options.offsetTop);
     }
   }
 });
