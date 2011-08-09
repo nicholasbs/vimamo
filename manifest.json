@@ -1,0 +1,12 @@
+{
+  "name": "Vimamo",
+  "version": "0.1",
+  "description": "Adds vim shortcuts to popular websites.",
+  "content_scripts": [
+    {
+      "matches": ["http://www.facebook.com/*"],
+      "js": ["jquery.js", "jkey.js", "vimamo.js"],
+      "css": ["style.css"]
+    }
+  ]
+}
