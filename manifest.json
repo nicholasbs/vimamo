@@ -5,7 +5,8 @@
   "content_scripts": [
     {
       "matches": ["http://www.facebook.com/*",
-                  "http://*.tumblr.com/*"],
+                  "http://*.tumblr.com/*",
+                  "http://news.ycombinator.com/*"],
       "js": ["jquery.js", "jkey.js", "vimamo.js"],
       "css": ["style.css"]
     }
