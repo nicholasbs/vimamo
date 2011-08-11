@@ -11,7 +11,7 @@ var sites = {
     onEnter: function() { location = $(".vimamo-selected .seeMore").attr("href"); },
     offsetBottom: 10,
     offsetTop: -10
-  },
+  }
 };
 
 // You can override these for specific sites above
@@ -81,7 +81,7 @@ function deselect(item) {
 // Used for domains that need to be special-cased (e.g., for working across
 // subdomains).
 function getPrimaryHostname(hostname) {
-  if (/^.*\.tumblr.com.*$/.test(hostname)) {
+  if (/^.*\.tumblr\.com.*$/i.test(hostname)) {
     return "tumblr.com";
   }
   return hostname;
