@@ -5,7 +5,8 @@ var sites = {
     offsetBottom: 30,
     offsetTop: -10,
     selectedClass: "vimamo-fb-selected",
-    searchSelector: ".uiSearchInput input[type=text]"
+    searchSelector: ".uiSearchInput input[type=text]",
+    onEnter: function() { location = $(".vimamo-fb-selected .actorName a").attr("href"); }
   },
   "tumblr.com": {
     selector: ".post",
