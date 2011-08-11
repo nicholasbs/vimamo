@@ -7,7 +7,7 @@
       "matches": ["http://www.facebook.com/*",
                   "http://*.tumblr.com/*",
                   "http://news.ycombinator.com/*"],
-      "js": ["jquery.js", "jkey.js", "vimamo.js"],
+      "js": ["jquery.js", "jquery.jkey.js", "vimamo.js"],
       "css": ["style.css"]
     }
   ]

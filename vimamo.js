@@ -4,7 +4,8 @@ var sites = {
     selector: ".uiStreamStory",
     offsetBottom: 30,
     offsetTop: -10,
-    selectedClass: "vimamo-fb-selected"
+    selectedClass: "vimamo-fb-selected",
+    searchSelector: ".uiSearchInput input[type=text]"
   },
   "tumblr.com": {
     selector: ".post",
@@ -40,7 +41,7 @@ var sites = {
         location = selected.find("td:last-child a").attr("href");
       }
     },
-    searchSelector: "input[name='q']"
+    searchSelector: "input[name=q]"
   }
 };
 
@@ -113,7 +114,12 @@ if (options.searchSelector) {
   $(document).jkey("/", function() {
     $(options.searchSelector).focus();
   });
+
+  $(options.searchSelector).jkey("escape", function() {
+    $(this).blur();
+  });
 }
+
 
 function select(item) {
   item.addClass(options.selectedClass);
