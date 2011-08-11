@@ -207,7 +207,7 @@
   
       if($.inArray(e.keyCode, keySplit) > -1){ // If the key the user pressed is matched with any key the developer set a key code with...
         if(typeof callback == 'function'){ //and they provided a callback function
-          if(this !== e.target && (/textarea|select|input/i.test(e.target.nodeName)) {
+          if(this !== e.target && /textarea|select|input/i.test(e.target.nodeName)) {
             return;
           }
           callback.call(this, keyCodesSwitch[e.keyCode] ); //trigger call back and...
