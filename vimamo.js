@@ -39,7 +39,8 @@ var sites = {
       } else { // comments link
         location = selected.find("td:last-child a").attr("href");
       }
-    }
+    },
+    searchSelector: "input[name='q']"
   }
 };
 
@@ -106,6 +107,12 @@ $(document).jkey("j, k", true, function(key) {
 
 if (options.onEnter) {
   $(document).jkey("enter, return", true, options.onEnter);
+}
+
+if (options.searchSelector) {
+  $(document).jkey("/", function() {
+    $(options.searchSelector).focus();
+  });
 }
 
 function select(item) {
