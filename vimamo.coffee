@@ -1,10 +1,10 @@
 # Add new sites to support here
 sites =
   "www.facebook.com":
-    selector: ".uiStreamStory"
-    offsetBottom: 30
-    offsetTop: -10
-    selectedClass: "vimamo-fb-selected:visible"
+    selector: ".uiStreamStory:visible"
+    offsetBottom: 40
+    offsetTop: -50
+    selectedClass: "vimamo-fb-selected"
     searchSelector: ".uiSearchInput input[type=text]"
     onEnter: -> window.location = $(".vimamo-fb-selected .actorName a").attr("href")
 
