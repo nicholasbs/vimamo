@@ -45,4 +45,4 @@ The site is keyed to its domain. The options are:
 
 Copyright (c) 2011, Nicholas Bergson-Shilcock. All rights reserved.
 
-SaveMyTweets is released under the GPLv3. See the included LICENSE file or http://www.gnu.org/licenses
+Vimamo is released under the GPLv3. See the included LICENSE file or http://www.gnu.org/licenses
