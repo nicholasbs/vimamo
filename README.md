@@ -7,7 +7,8 @@ currently supports `j` (down an item), `k` (up an item), `/` (search) and `ESC` 
 
 You can add support for new sites by adding the URL to the `matches` array in
 the `manifest.json` file and adding a new object literal to the `sites`
-variable in `vimamo.coffee`.
+variable in `vimamo.coffee`. If you want to change how selected items appear
+for a site, style the coresponding `selectedClass` in `style.css`.
 
 For example, here's how support for Facebook is implemented:
 
