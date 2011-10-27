@@ -3,6 +3,15 @@
 A chrome extension that adds basic Vim keyboard shortcuts to websites. It
 currently supports `j` (down an item), `k` (up an item), `/` (search) and `ESC` (cancel search) on Facebook, Hacker News, and Tumblr.
 
+## Install
+
+You can install Vimamo by visiting the following link in Chrome:
+
+https://github.com/nicholasbs/vimamo/blob/master/vimamo.crx?raw=true
+
+(Chrome will confirm that you want to download an extension and then ask again
+before installing it.)
+
 ## Adding new sites
 
 You can add support for new sites by adding the URL to the `matches` array in
